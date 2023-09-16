@@ -6,7 +6,7 @@ It is currently hosted on a Salesforce Experience Builder site (LWR)
 
 ## Gotchas
 
-Salesforce Experience Builder adds some of its own CSS to confirm with Salesforce styles.
+Salesforce Experience Builder adds some of its own CSS to conform to Salesforce styles.
 
 This is mostly a good thing. However, it can get in the way of certain custom styles.
 
