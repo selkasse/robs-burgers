@@ -6,6 +6,8 @@ It is currently hosted on a Salesforce Experience Builder site (LWR)
 
 ## Gotchas
 
+### CSS not being applied
+
 Salesforce Experience Builder adds some of its own CSS to conform to Salesforce styles.
 
 This is mostly a good thing. However, it can get in the way of certain custom styles.
@@ -62,3 +64,16 @@ The Head Markup ends up looking like this:
 
 <!-- webruntime-branding-shared stylesheets -->
 ```
+
+### Site requiring login
+
+By default, accessing the site will prompt for a Salesforce login.
+
+If this is not the desired behavior, you will need to adjust a setting:
+
+- open the Builder for your Experience Site
+- go to 'Settings'
+- in the 'General' tab, check the box for 'Guest users can see and interact with the site without logging in'
+- publish the site
+
+You should now be able to access the site without a login
