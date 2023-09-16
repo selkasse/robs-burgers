@@ -6,12 +6,12 @@ It is currently hosted on a Salesforce Experience Builder site (LWR)
 
 ## Gotchas
 
+<!-- START COLLAPSIBLE SECTION -->
+
 <details>
 <summary>
 <h3> CSS not being applied </h3>
 </summary>
-
-<!-- ### CSS not being applied -->
 
 Salesforce Experience Builder adds some of its own CSS to conform to Salesforce styles.
 
@@ -72,7 +72,14 @@ The Head Markup ends up looking like this:
 
 </details>
 
-### Site requiring login
+<!-- END COLLAPSIBLE SECTION -->
+
+<!-- START COLLAPSIBLE SECTION -->
+<details>
+
+<summary>
+<h3> Site requiring login </h3>
+</summary>
 
 By default, accessing the site will prompt for a Salesforce login.
 
@@ -84,3 +91,7 @@ If this is not the desired behavior, you will need to adjust a setting:
 - publish the site
 
 You should now be able to access the site without a login
+
+</details>
+
+<!-- END COLLAPSIBLE SECTION -->
