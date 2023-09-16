@@ -1,18 +1,62 @@
-# Salesforce DX Project: Next Steps
+# Rob's Burgers
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This is a sample site for a fictitous client -- Rob's Burgers
 
-## How Do You Plan to Deploy Your Changes?
+It is currently hosted on a Salesforce Experience Builder site (LWR)
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Gotchas
 
-## Configure Your Salesforce DX Project
+Salesforce Experience Builder adds some of its own CSS to confirm with Salesforce styles.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+This is mostly a good thing. However, it can get in the way of certain custom styles.
 
-## Read All About It
+For example, in the following CSS block, the `color` property was not being applied:
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+```css
+.logo {
+  display: inline-block;
+  color: white;
+  font-size: 60px;
+  margin-left: 10px;
+}
+```
+
+To get around this issue, the `<head>` markup must be changed, as that is where the default stylesheets are being loaded.
+
+To access the `<head>` markup, do the following:
+
+- open the Builder for your Experience Site
+- go to Settings
+- go to Advanced
+- press the 'Edit Head Markup' button
+- remove (or comment-out) the `dxp-slds-extensions.min.css` stylesheet
+
+The Head Markup ends up looking like this:
+
+```html
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Welcome to LWC Communities!</title>
+
+<link
+  rel="stylesheet"
+  href="{ basePath }/assets/styles/styles.css?{ versionKey }"
+/>
+
+<!-- webruntime-branding-shared stylesheets -->
+<link
+  rel="stylesheet"
+  href="{ basePath }/assets/styles/salesforce-lightning-design-system.min.css?{ versionKey }"
+/>
+<link
+  rel="stylesheet"
+  href="{ basePath }/assets/styles/dxp-site-spacing-styling-hooks.min.css?{ versionKey }"
+/>
+<link
+  rel="stylesheet"
+  href="{ basePath }/assets/styles/dxp-styling-hooks.min.css?{ versionKey }"
+/>
+<!--<link rel="stylesheet" href="{ basePath }/assets/styles/dxp-slds-extensions.min.css?{ versionKey }" /> -->
+
+<!-- webruntime-branding-shared stylesheets -->
+```
