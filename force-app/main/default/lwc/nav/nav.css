@@ -1,0 +1,27 @@
+.header {
+  background-color: black;
+  box-shadow: 1px 1px 5px 0px gray;
+  width: 100%;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  display: inline-block;
+  color: white;
+  font-size: 60px;
+  margin-left: 10px;
+}
+
+.nav-link {
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    position: fixed;
+    bottom: 0;
+  }
+}
