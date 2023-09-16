@@ -6,6 +6,8 @@ It is currently hosted on a Salesforce Experience Builder site (LWR)
 
 ## Gotchas
 
+<details>
+<summary>CSS</summary>
 ### CSS not being applied
 
 Salesforce Experience Builder adds some of its own CSS to conform to Salesforce styles.
@@ -64,6 +66,8 @@ The Head Markup ends up looking like this:
 
 <!-- webruntime-branding-shared stylesheets -->
 ```
+
+</details>
 
 ### Site requiring login
 
