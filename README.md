@@ -8,10 +8,10 @@ It is currently hosted on a Salesforce Experience Builder site (LWR)
 
 <details>
 <summary>
-<h3> CSS </h3>
+<h3> CSS not being applied </h3>
 </summary>
 
-### CSS not being applied
+<!-- ### CSS not being applied -->
 
 Salesforce Experience Builder adds some of its own CSS to conform to Salesforce styles.
 
