@@ -8,7 +8,7 @@ It is currently hosted on a Salesforce Experience Builder site (LWR)
 
 <details>
 <summary>
-### CSS
+<h3> CSS </h3>
 </summary>
 
 ### CSS not being applied
