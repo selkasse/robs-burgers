@@ -30,6 +30,8 @@ To access the `<head>` markup, do the following:
 - go to Advanced
 - press the 'Edit Head Markup' button
 - remove (or comment-out) the `dxp-slds-extensions.min.css` stylesheet
+- press the 'Save' button
+- refresh the page
 
 The Head Markup ends up looking like this:
 
