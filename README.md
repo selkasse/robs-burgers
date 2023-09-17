@@ -61,6 +61,8 @@ Remove or comment-out the line that looks like this:
 
 Similar to CSS not being applied, the default stylesheets in the `<head>` markup also adds unwanted styles. For instance, a colored background in the `body` that we did not specify.
 
+(Instructions on accessing the `<head>` markup are in the previous section, _CSS not being applied_)
+
 Again, we can comment out the appropriate stylesheet to remove the background color. However, keep in mind that this is the same stylesheet that allows for `slds` styling.
 
 In other words, removing this stillsheet will **disable built-in componenets and classes** like `<lightning-card>` and `slds-align_absolute-center`
