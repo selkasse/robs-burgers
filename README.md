@@ -40,38 +40,41 @@ To access the `<head>` markup, do the following:
 - press the 'Save' button
 - refresh the page
 
-The Head Markup ends up looking like this:
+Remove or comment-out the line that looks like this:
 
 ```html
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Welcome to LWC Communities!</title>
-
 <link
   rel="stylesheet"
-  href="{ basePath }/assets/styles/styles.css?{ versionKey }"
+  href="{ basePath }/assets/styles/dxp-slds-extensions.min.css?{ versionKey }"
 />
-
-<!-- webruntime-branding-shared stylesheets -->
-<link
-  rel="stylesheet"
-  href="{ basePath }/assets/styles/salesforce-lightning-design-system.min.css?{ versionKey }"
-/>
-<link
-  rel="stylesheet"
-  href="{ basePath }/assets/styles/dxp-site-spacing-styling-hooks.min.css?{ versionKey }"
-/>
-<link
-  rel="stylesheet"
-  href="{ basePath }/assets/styles/dxp-styling-hooks.min.css?{ versionKey }"
-/>
-<!--<link rel="stylesheet" href="{ basePath }/assets/styles/dxp-slds-extensions.min.css?{ versionKey }" /> -->
-
-<!-- webruntime-branding-shared stylesheets -->
 ```
 
 </details>
 
+<!-- END COLLAPSIBLE SECTION -->
+
+<!-- START COLLAPSIBLE SECTION -->
+<details>
+<summary>
+<h3>Mystery background color</h3>
+</summary>
+
+Similar to CSS not being applied, the default stylesheets in the `<head>` markup also adds unwanted styles. For instance, a colored background in the `body` that we did not specify.
+
+Again, we can comment out the appropriate stylesheet to remove the background color. However, keep in mind that this is the same stylesheet that allows for `slds` styling.
+
+In other words, removing this stillsheet will **disable built-in componenets and classes** like `<lightning-card>` and `slds-align_absolute-center`
+
+If you wish to proceed, remove or comment-out the line that looks like this:
+
+```html
+<link
+  rel="stylesheet"
+  href="{ basePath }/assets/styles/salesforce-lightning-design-system.min.css?{ versionKey }"
+/>
+```
+
+</details>
 <!-- END COLLAPSIBLE SECTION -->
 
 <!-- START COLLAPSIBLE SECTION -->
