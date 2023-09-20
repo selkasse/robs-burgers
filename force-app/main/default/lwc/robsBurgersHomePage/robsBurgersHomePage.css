@@ -1,0 +1,8 @@
+/* :host {
+  --test-var: purple;
+} */
+
+.container {
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  /* color: var(--test-var); */
+}
