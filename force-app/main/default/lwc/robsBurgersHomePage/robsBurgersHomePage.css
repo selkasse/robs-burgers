@@ -1,8 +1,5 @@
-/* :host {
-  --test-var: purple;
-} */
-
 .container {
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  /* color: var(--test-var); */
+  --dxp-g-brand: #4dbae1;
+  background-color: var(--dxp-g-brand);
+  text-align: center;
 }
