@@ -1,8 +1,11 @@
-.header {
+:host {
   --dxp-c-link-text-color: var(--robs-red);
   --dxp-g-brand: var(--robs-yellow);
   --dxp-g-brand-contrast: var(--robs-gray);
+  --dxp-g-brand-contrast-1: var(--robs-orange);
+}
 
+.header {
   background-color: var(--dxp-g-brand);
   box-shadow: 1px 1px 5px 0px var(--dxp-g-brand-contrast);
   width: 100%;
@@ -14,34 +17,43 @@
   margin-left: 10px;
 }
 
-.menu a {
+/* .menu {:w
+  display: flex;
+} */
+
+/* .menu a {
   display: block;
   font-weight: 900;
   padding: 30px;
+} */
+
+.nav a:hover {
+  color: var(--dxp-c-link-text-color);
+  text-decoration: none;
 }
 
-/* TODO: should be able to delete this with proper styling hooks */
 /* .menu a:hover {
-  background-color: gray;
+  background-color: var(--dxp-g-brand-contrast-1);
 } */
-/* TODO: should be able to delete this with proper styling hooks */
 
 .nav-menu {
+  width: 35%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
 }
-/* .nav {
-  max-height: 0;
-  transition: max-height 0.5s ease-out;
-} */
 
-@media only screen and (max-width: 768px) {
+/* TODO: animation for transition on hamburger menu open/close */
+
+@media only screen and (max-width: 480px) {
+  .desktop {
+    display: none;
+  }
   .header {
     position: fixed;
     bottom: 0;
@@ -56,5 +68,9 @@
   .nav-menu {
     flex-direction: column;
     align-items: center;
+  }
+
+  .menu a:hover {
+    background-color: var(--dxp-g-brand);
   }
 }
