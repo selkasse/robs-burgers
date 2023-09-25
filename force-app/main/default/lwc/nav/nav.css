@@ -5,72 +5,57 @@
   --dxp-g-brand-contrast-1: var(--robs-orange);
 }
 
-.header {
+.nav {
+  overflow: hidden;
   background-color: var(--dxp-g-brand);
-  box-shadow: 1px 1px 5px 0px var(--dxp-g-brand-contrast);
-  width: 100%;
-  position: sticky;
 }
 
-.logo {
-  font-size: 60px;
-  margin-left: 10px;
-}
-
-/* .menu {:w
-  display: flex;
-} */
-
-/* .menu a {
+.nav a {
+  float: left;
   display: block;
-  font-weight: 900;
-  padding: 30px;
-} */
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+}
 
 .nav a:hover {
+  background-color: var(--dxp-g-brand-contrast-1);
   color: var(--dxp-c-link-text-color);
   text-decoration: none;
 }
 
-/* .menu a:hover {
-  background-color: var(--dxp-g-brand-contrast-1);
-} */
-
-.nav-menu {
-  width: 35%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.nav .icon {
+  display: none;
 }
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* TODO: animation for transition on hamburger menu open/close */
 
 @media only screen and (max-width: 480px) {
-  .desktop {
-    display: none;
-  }
-  .header {
+  .nav {
     position: fixed;
-    bottom: 0;
     left: 0;
+    bottom: 0;
+    width: 100%;
     z-index: 1;
   }
 
-  .nav {
-    flex-direction: column;
+  .nav a {
+    display: none;
   }
 
-  .nav-menu {
-    flex-direction: column;
-    align-items: center;
+  .nav a.icon {
+    font-size: 2em;
+    float: right;
+    display: block;
   }
 
-  .menu a:hover {
-    background-color: var(--dxp-g-brand);
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
