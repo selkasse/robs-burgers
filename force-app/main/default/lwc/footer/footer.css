@@ -1,0 +1,27 @@
+:host {
+  --dxp-c-link-text-color: var(--robs-blue);
+  --dxp-g-root: var(--robs-yellow);
+  --dxp-g-brand: var(--robs-red);
+  --dxp-g-brand-contrast: var(--robs-gray);
+  --dxp-g-brand-contrast-1: var(--robs-orange);
+}
+.footer {
+  /* background-color: var(--dxp-g-brand-contrast);
+  color: var(--dxp-g-root); */
+  /* position: fixed; */
+  /* left: 0; */
+  /* bottom: 0; */
+  /* width: 100%; */
+  /* height: 75px; */
+  /* text-align: center;
+  font-weight: 900; */
+  font-weight: 900;
+  text-align: center;
+}
+@media only screen and (max-width: 480px) {
+  .footer {
+    /* position: absolute; */
+    /* bottom: 75px; */
+    /* left: 0; */
+  }
+}

@@ -6,8 +6,16 @@
 }
 
 .nav {
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   background-color: var(--dxp-g-brand);
+  /*fixed position */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .nav a {
@@ -30,11 +38,14 @@
 
 @media only screen and (max-width: 480px) {
   .nav {
+    display: block;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    background-color: transparent;
     z-index: 1;
+    top: auto;
   }
 
   .nav a {
@@ -42,18 +53,29 @@
   }
 
   .nav a.icon {
-    font-size: 2em;
+    font-size: 2.75em;
     float: right;
     display: block;
   }
 
-  .nav.responsive .icon {
+  .nav a.icon:hover {
+    background-color: transparent;
+  }
+
+  .nav.expanded {
+    background-color: var(--dxp-g-brand);
+  }
+
+  .nav.expanded .icon {
     position: absolute;
     right: 0;
     bottom: 0;
   }
+  .nav.expanded a.icon:hover {
+    background-color: var(--dxp-g-brand-contrast-1);
+  }
 
-  .nav.responsive a {
+  .nav.expanded a {
     float: none;
     display: block;
     text-align: left;
