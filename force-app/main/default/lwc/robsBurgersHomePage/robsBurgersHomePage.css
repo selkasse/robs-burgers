@@ -1,5 +1,25 @@
+:host {
+  --dxp-g-brand: var(--robs-blue);
+  --slds-c-card-color-background: var(--robs-yellow);
+  --slds-c-card-color-border: var(--robs-red);
+}
 .container {
-  --dxp-g-brand: #4dbae1;
+  margin-top: 2em;
   background-color: var(--dxp-g-brand);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-card {
+  background-color: var(--slds-c-card-color-background);
+  border: 2px solid var(--slds-c-card-color-border);
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
   text-align: center;
+  border-radius: 5px;
+}
+
+p {
+  margin-top: 2em;
 }
