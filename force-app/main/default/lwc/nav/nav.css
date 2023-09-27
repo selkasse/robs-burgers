@@ -53,13 +53,18 @@
     display: none;
   }
 
-  .nav a.icon {
+  .nav button.icon {
+    border: none;
+    background-color: transparent;
+  }
+
+  .nav button.icon {
     font-size: 2.75em;
     float: right;
     display: block;
   }
 
-  .nav a.icon:hover {
+  .nav button.icon:hover {
     background-color: transparent;
   }
 
