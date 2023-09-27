@@ -10,6 +10,7 @@
   justify-content: center;
   overflow: hidden;
   background-color: var(--dxp-g-brand);
+  /* position: absolute; */
   /*fixed position */
   position: fixed;
   width: 100%;
@@ -20,20 +21,57 @@
 
 .nav a {
   float: left;
-  display: block;
+  /* display: block; */
   text-align: center;
   padding: 14px 16px;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.nav a:hover {
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .menu-btn {
+  font-size: 1.5rem;
+  border: none;
+  color: var(--dxp-c-link-text-color);
+  background-color: inherit;
+  font-weight: 700;
+  padding: 14px 16px;
+  margin: 0;
+}
+
+.nav a:hover,
+.subnav:hover .menu-btn {
   background-color: var(--dxp-g-brand-contrast-1);
   color: var(--dxp-c-link-text-color);
   text-decoration: none;
 }
 
-.nav .icon {
+.menu-categories {
+  display: none;
+  /* position: absolute; */
+  /* left: 0; */
+  background-color: var(--dxp-g-brand-contrast-1);
+  width: 100%;
+  z-index: 1;
+}
+
+.menu-categories a {
+  float: left;
+}
+
+.menu-categories a:hover {
+  background-color: var(--dxp-g-brand-contrast-1);
+}
+
+.subnav:hover .menu-categories {
+  display: block;
+}
+
+.nav .hamburger {
   display: none;
 }
 
@@ -53,18 +91,22 @@
     display: none;
   }
 
-  .nav button.icon {
+  .menu-btn {
+    display: none;
+  }
+
+  .nav button.hamburger {
     border: none;
     background-color: transparent;
   }
 
-  .nav button.icon {
+  .nav button.hamburger {
     font-size: 2.75em;
     float: right;
     display: block;
   }
 
-  .nav button.icon:hover {
+  .nav button.hamburger:hover {
     background-color: transparent;
   }
 
@@ -72,16 +114,18 @@
     background-color: var(--dxp-g-brand);
   }
 
-  .nav.expanded .icon {
+  .nav.expanded .hamburger {
     position: absolute;
     right: 0;
     bottom: 0;
   }
-  .nav.expanded a.icon:hover {
+
+  .nav.expanded .subnav:hover {
     background-color: var(--dxp-g-brand-contrast-1);
   }
 
-  .nav.expanded a {
+  .nav.expanded a,
+  .nav.expanded button {
     float: none;
     display: block;
     text-align: left;

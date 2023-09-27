@@ -2,9 +2,16 @@
   <div class="nav">
     <a> Home </a>
 
-    <a> Menu </a>
+    <div class="subnav">
+      <button class="menu-btn">Menu</button>
+      <div class="menu-categories">
+        <a>Sides</a>
+        <a>Burgers</a>
+        <a>Drinks</a>
+      </div>
+    </div>
 
     <a> Contact </a>
-    <button class="icon" onclick={handleHamburgerClick}>🍔</button>
+    <button class="hamburger" onclick={handleHamburgerClick}>🍔</button>
   </div>
 </template>
